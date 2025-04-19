@@ -33,19 +33,20 @@ const Header = () => {
               return () => unsubscribe();
         },[]);
     return(
-        <div className='absolute w-screen px-8 h-20 bg-gradient-to-b from-black z-10 flex justify-between'>
+        <div className='absolute w-screen px-8 bg-gradient-to-b from-black z-10 flex justify-between'>
+          <div className=" h-20">
             <img 
             className="w-44"
             src= {LOGO}
             alt = "logo" />
+          </div>
             {user && <div className="flex p-2">
                 <img className="w-12 h-12 my-4"
                 src={user?.photoURL}
                 alt = "usericon" />
                 <button onClick={handleSignOut} className="font-bold text-white">(Sign out)</button>
             </div>}
-
-        </div>
+        </div> 
     );
 };
 
